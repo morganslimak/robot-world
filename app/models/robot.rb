@@ -42,4 +42,10 @@ class Robot
                       robot_params[:avatar],
                       id)
   end
+
+  def self.destroy(id)
+    database.execute("DELETE FROM robots
+                      WHERE id = ?;", id)
+  end
+
 end
