@@ -1,5 +1,6 @@
 <h1>My Robots</h1>
 <% @robots.each do |robot| %>
   <p><%= robot.name %></p>
-  <img src="<%= robot.avatar %>">
+  <img src="<%= robot.avatar %>"><br>
+  <a href="/robots/<%= robot.id %>/update">Update</a>
 <% end %>
